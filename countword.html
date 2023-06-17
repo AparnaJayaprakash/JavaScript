@@ -1,0 +1,39 @@
+ <html>
+<head>
+<title>Count Word</title>
+<script>
+function countcase(){
+    var upper=0;
+    var lower=0;
+	
+	
+	 var s =  document.getElementById('word').value;
+ document.write("word: " + document.getElementById('word').value);
+ document.write('<br>');
+    document.write(s.length);
+	document.write('<br>');
+    for(var i=0;i<s.length;i++){
+        if(s[i].toLowerCase() == s[i]){
+            lower=lower+1;
+        }
+		else{
+			upper=upper+1;
+			}
+
+    }
+	
+	document.write("LowerCount: " + lower );
+	document.write("UpperCount: " + upper);
+    
+
+}
+</script>  
+</head>
+<body>
+<form>  
+<input type="text" name="word1" id="word"  value="" > 
+<input type="button" name="button" value="count" onClick="countcase()" />
+</form>
+</body>
+</html>
+
